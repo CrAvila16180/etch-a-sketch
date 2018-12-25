@@ -1,3 +1,8 @@
+:root {
+    --color: #212121;
+}
+
+
 @font-face {
     font-family: 'Product Sans';
     font-style: normal;
@@ -60,7 +65,9 @@ input#number {
 }
 
 .cell {
+    box-sizing: border-box;
     outline: .25px solid #757575;
     margin: 0;
     padding: 0;
 }
+

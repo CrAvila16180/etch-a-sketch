@@ -1,5 +1,8 @@
 let number = document.querySelector('#number');
 let grid = number.getAttribute('value');
+let button = document.querySelector('button');
+
+let numero = Number(prompt('Enter Number'));
 
 
 const createCell = (length) => {
@@ -8,7 +11,7 @@ const createCell = (length) => {
     const containerWidth = container.getAttribute('width');
     const cell = document.createElement('div');
     
-    let boxSize = `${(Math.floor(400/length))}px`;
+    let boxSize = `${(100/length)}%`;
     cell.classList.add('cell');
     cell.style.width = `${boxSize}`;
     cell.style.height = `${boxSize}`;
@@ -31,5 +34,9 @@ const generateGrid = (length) => {
 number.addEventListener('change', handleUpdate);
 number.addEventListener('click', handleUpdate);
 
-generateGrid(20);
+button.addEventListener('click', generateGrid(number));
+
+generateGrid(numero);
+
+
 
