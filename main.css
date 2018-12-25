@@ -19,7 +19,7 @@ header {
     margin-bottom: 0;
     color: white;
     background: #ffbf00;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -39,21 +39,22 @@ input#number {
 }
 
 .container {
-    border: 10px solid black;
-    margin: 10px;
-    height: 70vh;
+    
+    border: 5px solid #212121;
+    margin: 10px auto;
+    width: 70vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    align-content: stretch;
-    flex: 10;
-
+    height: 70vh;
+   
+   
+    
 }
 
 .cell {
-    border: 1px solid #212121;
-    min-height: 5px;
-    min-width: 5px;
+    border: .25px solid #212121;
+    margin: 0;
+    padding: 0;
+    
 
 }
