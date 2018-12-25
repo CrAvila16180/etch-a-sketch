@@ -3,10 +3,12 @@ let grid = number.getAttribute('value');
 
 
 const createCell = (length) => {
-    const container = document.querySelector('.container')
+    
+    const container = document.querySelector('.container');
+    const containerWidth = container.getAttribute('width');
     const cell = document.createElement('div');
-    const containerSize = container.style.width;
-    let boxSize = `${(Math.floor(100/length))}%`;
+    
+    let boxSize = `${(Math.floor(400/length))}px`;
     cell.classList.add('cell');
     cell.style.width = `${boxSize}`;
     cell.style.height = `${boxSize}`;
@@ -21,7 +23,7 @@ function handleUpdate() {
 
 const generateGrid = (length) => {
     let value = length;
-    for(i = 0; i<= (value*value); i++){
+    for(i = 0; i< (value*value); i++){
         createCell(length);
     }
 }
@@ -29,4 +31,5 @@ const generateGrid = (length) => {
 number.addEventListener('change', handleUpdate);
 number.addEventListener('click', handleUpdate);
 
-generateGrid(10);
+generateGrid(20);
+
