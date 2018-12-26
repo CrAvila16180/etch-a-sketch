@@ -2,14 +2,16 @@ let number = 16;
 let displayNumber = document.querySelector('.txtNumber');
 let buttonIncrease = document.querySelector('#up');
 let buttonDecrease = document.querySelector('#down');
+let container = document.querySelector('.container');
 
 
 
 
+let cells = '';
 
-let cells = document.querySelectorAll('.cell');
 function deleteCells(){
-    console.log(cells);
+    container.innerHTML = '';
+    
  }
  
 
@@ -48,13 +50,15 @@ function generateGrid(){
     let value = number;
     for(i = 0; i< (value*value); i++){
     createCell(number);}
+    cells = document.querySelectorAll('.cell');
+    console.log(cells);
 };
 
 
 
 
+generateGrid(16)
 
-generateGrid(number);
 
 buttonIncrease.addEventListener('click', increaseNumber)
 buttonDecrease.addEventListener('click', decreaseNumber)
