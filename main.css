@@ -11,13 +11,13 @@
   } 
 
   body {
+    background-image: url(bg.jpg);
     background-repeat: no-repeat;
+    font-family: Product Sans;
     background-size: cover;
     max-height: 100vh;
-    font-family: Product Sans;
+    padding: 0;
     margin: 0;
-    padding: 0;  
-    background-image: url(bg.jpg); 
 }
 
  body > * {
@@ -25,18 +25,15 @@
  }
 
 header {
-    margin: 10px 10px;
+    margin: 5px;
     margin-bottom: 0;
     color: white;
-    
-    padding: 5px;
     text-align: center;
 }
 
 .preferences {
     font-size: 20px;
     color: white;
-    
     margin: 0 10px;
     display: flex;
     height: 40px;
@@ -52,9 +49,9 @@ input#number {
 .container {
     box-sizing: border-box;
     outline: 5px solid #212121;
-    margin: 50px auto;
-    width: 400px;
-    height: 400px;
+    margin: 10px auto;
+    width: 500px;
+    height: 500px;
     display: flex;
     flex-wrap: wrap;
     background-color: #fff;
