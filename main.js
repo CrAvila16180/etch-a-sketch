@@ -1,17 +1,28 @@
-let number = document.querySelector('#number');
-let grid = number.getAttribute('value');
-let button = document.querySelector('button');
+let number = 16;
+let displayNumber = document.querySelector('.txtNumber');
+let buttonIncrease = document.querySelector('#up');
+let buttonDecrease = document.querySelector('#down');
 
-let numero = Number(prompt('Enter Number'));
+displayNumber.style.width = '30px';
+displayNumber.textContent = number;
+
+const increaseNumber = () => {
+    number += 1;
+    displayNumber.textContent = number;
+    console.log(number);
+}
+
+const decreaseNumber = () => {
+    number -= 1;
+    displayNumber.textContent = number;
+    console.log(number);
+}
 
 
 const createCell = (length) => {
-    
     const container = document.querySelector('.container');
-    const containerWidth = container.getAttribute('width');
     const cell = document.createElement('div');
-    
-    let boxSize = `${(100/length)}%`;
+    let boxSize = `${(100/number)}%`;
     cell.classList.add('cell');
     cell.style.width = `${boxSize}`;
     cell.style.height = `${boxSize}`;
@@ -24,19 +35,22 @@ function handleUpdate() {
     console.log(this.value)
 }
 
-const generateGrid = (length) => {
-    let value = length;
+function generateGrid(){
+    let value = number;
     for(i = 0; i< (value*value); i++){
-        createCell(length);
-    }
-}
+    createCell(number);}
+};
 
-number.addEventListener('change', handleUpdate);
-number.addEventListener('click', handleUpdate);
 
-button.addEventListener('click', generateGrid(number));
 
-generateGrid(numero);
+
+
+
+buttonIncrease.addEventListener('click', increaseNumber)
+buttonDecrease.addEventListener('click', decreaseNumber)
+
+buttonIncrease.addEventListener('click', generateGrid);
+buttonDecrease.addEventListener('click', generateGrid);
 
 
 
