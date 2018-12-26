@@ -1,19 +1,29 @@
 let number = 16;
-let displayNumber = document.querySelector('.txtNumber');
-let buttonIncrease = document.querySelector('#up');
-let buttonDecrease = document.querySelector('#down');
-let container = document.querySelector('.container');
-
-
-
-
-let cells = '';
+    displayNumber = document.querySelector('.txtNumber');
+    buttonIncrease = document.querySelector('#up');
+    buttonDecrease = document.querySelector('#down');
+    container = document.querySelector('.container');
+    cells = '';
+    clearButton = document.querySelector('.clear');
 
 function deleteCells(){
     container.innerHTML = '';
-    
  }
- 
+
+ function clearCells(){
+     cells.forEach(cell => {
+         cell.style.background = 'white';
+     });
+ }
+
+let changeColor = (e) =>{
+    console.log(e);
+    if(e.target.getAttribute('class') == 'cell'){
+        e.target.style.background = 'black';
+    }
+};
+
+
 
 displayNumber.style.width = '30px';
 displayNumber.textContent = number;
@@ -57,8 +67,15 @@ function generateGrid(){
 
 
 
-generateGrid(16)
+generateGrid(number);
 
+cells.forEach(cell => {
+    addEventListener('mouseover',changeColor);
+    
+});
+
+
+clearButton.addEventListener('click', clearCells);
 
 buttonIncrease.addEventListener('click', increaseNumber)
 buttonDecrease.addEventListener('click', decreaseNumber)

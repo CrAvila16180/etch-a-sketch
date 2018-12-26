@@ -41,6 +41,13 @@ header {
     align-items: center;
 }
 
+.preferences > * {
+    width: 300px;
+   
+    text-align: center;
+}
+
+
 
 input#number {
     width: 50px;
@@ -71,6 +78,17 @@ button {
     width: 25px;
     height: 25px;
     margin: 3px;
+    box-shadow: none;
+    background: white;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #757575;
+    
 }
+
+.clear {
+    width: 100px; 
+}
+
 
 
