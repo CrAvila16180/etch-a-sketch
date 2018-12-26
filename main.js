@@ -19,7 +19,7 @@ function deleteCells(){
 let changeColor = (e) =>{
     console.log(e);
     if(e.target.getAttribute('class') == 'cell'){
-        e.target.style.background = 'black';
+        e.target.style.background = '#212121';
     }
 };
 
