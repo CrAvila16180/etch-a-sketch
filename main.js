@@ -23,8 +23,6 @@ let changeColor = (e) =>{
     }
 };
 
-
-
 displayNumber.style.width = '30px';
 displayNumber.textContent = number;
 
@@ -40,7 +38,6 @@ const decreaseNumber = () => {
     console.log(number);
 }
 
-
 const createCell = (length) => {
     const container = document.querySelector('.container');
     const cell = document.createElement('div');
@@ -52,9 +49,6 @@ const createCell = (length) => {
     
 }
 
-
-
-
 function generateGrid(){ 
     deleteCells(); 
     let value = number;
@@ -64,9 +58,6 @@ function generateGrid(){
     console.log(cells);
 };
 
-
-
-
 generateGrid(number);
 
 cells.forEach(cell => {
@@ -74,13 +65,10 @@ cells.forEach(cell => {
     
 });
 
-
 clearButton.addEventListener('click', clearCells);
 
 buttonIncrease.addEventListener('click', increaseNumber)
 buttonDecrease.addEventListener('click', decreaseNumber)
-
-
 
 buttonIncrease.addEventListener('click', generateGrid);
 buttonDecrease.addEventListener('click', generateGrid);
